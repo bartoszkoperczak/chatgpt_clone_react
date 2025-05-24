@@ -1,71 +1,63 @@
-# Getting Started with Create React App
+# ChatGPT Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prosty klon ChatGPT z frontendem w React i backendem w Node.js (Express), korzystający z API OpenAI.
 
-## Available Scripts
+## Funkcje
 
-In the project directory, you can run:
+- Wysyłanie wiadomości do modelu GPT-3.5-turbo (OpenAI)
+- Odpowiedzi wyświetlane w stylu czatu
+- Obsługa Enter do wysyłania wiadomości
+- Autoscroll do najnowszej wiadomości
+- Przycisk "New Chat" odświeżający rozmowę
 
-### `npm start`
+## Wymagania
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js (18+)
+- Konto OpenAI z aktywnym kluczem API (i środkami na koncie)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalacja
 
-### `npm test`
+1. **Sklonuj repozytorium:**
+   ```bash
+   git clone https://github.com/bartoszkoperczak/chatgpt_clone_react.git
+   cd gpt-clone
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Zainstaluj zależności frontendu:**
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Skonfiguruj backend:**
+   ```bash
+   cd backend
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Ustaw klucz OpenAI:**
+   - Utwórz plik `.env` w folderze `backend`:
+     ```
+     OPENAI_API_KEY=sk-...tutaj_twój_klucz...
+     ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Uruchomienie
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Uruchom backend:**
+   ```bash
+   cd backend
+   node index.js
+   ```
+   Backend będzie dostępny na `http://localhost:5000`.
 
-### `npm run eject`
+2. **Uruchom frontend:**
+   ```bash
+   cd ..
+   npm start
+   ```
+   Frontend będzie dostępny na `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Ważne
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# chatgpt_clone_react" 
+- **Nie udostępniaj swojego klucza API publicznie!**
+- Klucz API powinien być tylko w pliku `.env` na backendzie.
+- Jeśli nie masz aktywnego planu na OpenAI, API nie będzie działać.
